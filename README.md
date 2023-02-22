@@ -152,3 +152,18 @@ The `overridingClasspath` property is a Gradle's `FileCollection`, which is simp
 # Version
 
 See [VERSION.md](VERSION.md) for more information.
+
+# Including this plugin locally
+Assuming you copied the generated plugin to plugins/ directory
+In your build.gradle add as first lines
+```gradle
+buildscript {
+	dependencies{
+        	classpath files('plugins/windows-service-plugin-1.1.0.jar')
+	}
+}
+plugins {
+	id "com.github.alexeylisyutenko.windows-service-plugin" version "1.1.0"
+}
+
+```
